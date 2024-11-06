@@ -5,6 +5,7 @@ import { useState } from "react";
 import LoginFormModal from "@/components/LoginForm";
 import ScrollButton from "@/components/ScrollButton";
 import FooterBar from "@/components/Footer";
+import CarouselRD from "@/components/RuidosCarousel";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -217,7 +218,7 @@ export default function Home() {
 
         <section
           id="solutions"
-          className="relative h-100 bg-gray-800 flex items-center justify-center text-center"
+          className="relative h-90 bg-gray-800 flex items-center justify-center text-center"
           style={{
             backgroundImage: `url('/icons/solucoes/fundo.svg')`,
             backgroundSize: "cover",
@@ -233,7 +234,7 @@ export default function Home() {
             {/* Cards */}
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card 1 */}
-              <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
+              <div className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
                 <img
                   src="/icons/solucoes/iphone15.svg"
                   alt="Descrição do Card 1"
@@ -242,7 +243,7 @@ export default function Home() {
                 <h3 className="mt-4 text-xl font-semibold">Aplicação Mobile</h3>
               </div>
               {/* Card 2 */}
-              <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
+              <div className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
                 <img
                   src="/icons/solucoes/soundwave.svg"
                   alt="Descrição do Card 2"
@@ -254,7 +255,7 @@ export default function Home() {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
+              <div className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
                 <img
                   src="/icons/solucoes/macstudio.svg"
                   alt="Descrição do Card 3"
@@ -277,13 +278,24 @@ export default function Home() {
         </section>
 
         {/* Frequências */}
-        <div className="bg-gray-800 h-screen">
-          <CardHov />
+        <div
+          className="bg-gray-800 h-full py-20 flex flex-col gap-10"
+          style={{
+            backgroundImage: "url('/blur.png')",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h2 className="text-5xl font-gothic text-custom_cinza text-center">
+            CONHEÇA OS RUÍDOS
+          </h2>
+          <CarouselRD />
         </div>
 
         {/* Contato */}
-        <FooterBar/>
-        <ScrollButton/>
+        <FooterBar />
+        <ScrollButton />
         <LoginFormModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
     </>

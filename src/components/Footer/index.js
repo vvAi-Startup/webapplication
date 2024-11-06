@@ -66,7 +66,7 @@ export default function FooterBar() {
         </div>
 
         {/* Direitos Reservados */}
-        <div className="mt-4 text-center">
+        <div className="mt-1 text-center">
           <span className="text-sm text-gray-400">
             vv<span className="font-bold">Ai</span> Todos os direitos reservados
             © 2024
