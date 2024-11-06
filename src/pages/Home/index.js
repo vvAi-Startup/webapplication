@@ -1,4 +1,3 @@
-import CardHov from "@/components/CardHover";
 import Head from "next/head";
 import "./Home.module.css";
 import { useState } from "react";
