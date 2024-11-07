@@ -36,7 +36,7 @@ const LoginFormModal = ({ isOpen, onClose }) => {
 
       router.push("/App");
     } else {
-      setError("Invalid username or password");
+      setError("Usuário ou senha inválidos!");
     }
   };
 
