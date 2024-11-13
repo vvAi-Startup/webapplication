@@ -88,7 +88,8 @@ export default function Home() {
                   <span className="mt-4 text-sm text-white">
                     O fone de ouvido com inteligência artificial
                     <p> voltado para as crianças dentro do Transtorno</p>
-                    <p> do Espectro Autista (TEA) no ambiente pedagógico</p>
+                    <p> de Processamento Auditivo Central (TPAC) </p>
+                    <p>no ambiente pedagógico</p>
                   </span>
                   <a
                     href="#calmwave"
@@ -183,32 +184,33 @@ export default function Home() {
                 Por que Calm Wave?
               </h2>
               <span className="text-xl leading-relaxed">
-                O Transtorno do Espectro Autista (TEA) é uma condição que
-                influencia a forma como uma pessoa se comunica, interage
-                socialmente e se comporta.
+                O Transtorno de Processamento Auditivo Central (TPAC), também
+                conhecido como Distúrbio de Processamento Auditivo (DPA), é um
+                distúrbio no qual o cérebro tem dificuldades em processar as
+                informações auditivas, apesar da audição periférica estar
+                normal.
                 <br />
-                É caracterizado por diferenças no desenvolvimento cerebral que
-                afetam a maneira como as conexões neurais são formadas e
-                processadas.
-                <br />A hipersensibilidade auditiva em crianças com TEA é
-                caracterizada por uma sensibilidade aumentada aos sons, podendo
-                causar desconforto ou ansiedade.
+                Isso significa que, a pessoa pode ter uma audição normal, mas
+                apresenta dificuldades em compreender e interpretar os sons que
+                ouve, principalmente em ambientes ruidosos ou quando há mais de
+                uma fonte sonora.
               </span>
             </div>
 
             {/* Coluna da Direita */}
-            <div className="w-full md:w-1/2 text-3xl font-bold space-y-6 flex flex-col items-center">
+            <div className="w-full md:w-1/2 text-3xl font-bold space-y-3 flex flex-col items-center">
               <div className="w-3/4 pt-4 text-right">
-                <span className="text-teal-300">2 a cada 1000</span>{" "}
-                <span>crianças diagnosticam o autismo</span>
+                <span className="text-teal-300">Problemas</span>{" "}
+                <span>de atenção auditiva que afetam o foco e aprendizado</span>
               </div>
               <div className="border-t border-gray-400 w-3/4 pt-4 text-right">
-                <span className="text-teal-300">Mais de 90%</span>{" "}
-                <span>possuem hipersensibilidade auditiva</span>
+                <span className="text-teal-300">Dificuldade</span>{" "}
+                <span>em seguir instruções</span>
               </div>
               <div className="border-t border-b border-gray-400 w-3/4 pt-4 text-right pb-4">
                 <span className="px-4 py-3 rounded-md">
-                  Principal barreira no aprendizado
+                  <span className="text-teal-300">Confusões </span>
+                  <span>com sons semelhantes</span>
                 </span>
               </div>
             </div>
@@ -268,7 +270,7 @@ export default function Home() {
             {/* Descrição geral */}
             <p className="mt-10 text-lg font-montserrat">
               No final, se espera que nossa tecnologia melhore a qualidade de
-              vida e o bem-estar emocional das crianças com TEA, além de
+              vida e o bem-estar emocional das crianças com TPAC, além de
               contribuir para a promoção da educação inclusiva, facilitando a
               participação e o sucesso acadêmico de todas as crianças,
               independentemente de suas necessidades sensoriais ou cognitivas.

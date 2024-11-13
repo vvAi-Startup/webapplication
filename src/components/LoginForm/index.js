@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 const LoginFormModal = ({ isOpen, onClose }) => {
   const router = useRouter();
-  // Define state variables for username, password, and error message
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,17 +16,15 @@ const LoginFormModal = ({ isOpen, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation
     if (!username || !password) {
-      setError("Both fields are required");
+      setError("Preencha todos os campos");
       return;
     }
 
     setError("");
 
-    // Simulate authentication (you can replace this with real logic)
     if (username === "admin" && password === "password") {
-      console.log("Logging in with", username, password);
+      console.log("Logando com ", username, password);
 
       setUsername("");
       setPassword("");
