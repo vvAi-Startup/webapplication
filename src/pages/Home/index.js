@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Head>
         <title>Calm Wave</title>
-        <meta name="description" content="Aplicação web do CalmWave" />
+        <meta name="description" content="Aplicação web do Calm Wave" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -39,6 +39,11 @@ export default function Home() {
             <li>
               <a href="#why" className="hover:text-gray-300">
                 Por Que?
+              </a>
+            </li>
+            <li>
+              <a href="#solutions" className="hover:text-gray-300">
+                Soluções
               </a>
             </li>
             <li>
@@ -279,20 +284,22 @@ export default function Home() {
         </section>
 
         {/* Frequências */}
-        <div
-          className="bg-gray-800 h-full py-20 flex flex-col gap-10"
-          style={{
-            backgroundImage: "url('/blur.png')",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h2 className="text-5xl font-gothic text-custom_cinza text-center">
-            CONHEÇA OS RUÍDOS
-          </h2>
-          <CarouselRD />
-        </div>
+        <section id="frequencies">
+          <div
+            className="bg-gray-800 h-full py-20 flex flex-col gap-10"
+            style={{
+              backgroundImage: "url('/blur.png')",
+              backgroundSize: "contain",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <h2 className="text-5xl font-gothic text-custom_cinza text-center">
+              CONHEÇA OS RUÍDOS
+            </h2>
+            <CarouselRD />
+          </div>
+        </section>
 
         {/* Contato */}
         <FooterBar />
