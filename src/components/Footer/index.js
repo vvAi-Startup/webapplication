@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function FooterBar() {
   const router = useRouter();
   return (
-    <section id="contact" className="bg-[#010101] py-1 text-white">
+    <section id="contact" className="bg-[#2C2C2C] py-1 text-white pl-10">
       <div className="max-w-7xl mx-auto px-4 mt-2">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           {/* Informações de Contato */}
@@ -13,7 +13,7 @@ export default function FooterBar() {
             <h2 className="text-3xl font-bold font-gothic mb-4">Contato</h2>
             <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
               <AiTwotoneMail className="text-xl" />
-              <p className="text-lg">calmwave2024@outlook.com</p>
+              <p className="text-lg">vvai2023ltda@gmail.com</p>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
               <AiFillPhone className="text-xl" />
@@ -26,7 +26,7 @@ export default function FooterBar() {
             className="flex justify-center items-center flex-col space-y-2"
             // onClick={router.push("/Home")}
           >
-            <span className="text-xl text-white bg-violet-700 px-4 py-2 rounded font-gothic hover:bg-violet-600 cursor-pointer transition duration-300">
+            <span className="text-xl text-white px-4 py-2 rounded font-gothic cursor-pointer transition duration-300">
               vvAi Startup
             </span>
             <p className="text-sm text-gray-400">

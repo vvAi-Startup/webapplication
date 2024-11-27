@@ -1,16 +1,24 @@
 import Head from "next/head";
 import "./Home.module.css";
-import { useState } from "react";
-import LoginFormModal from "@/components/LoginForm";
 import ScrollButton from "@/components/ScrollButton";
 import FooterBar from "@/components/Footer";
 import CarouselRD from "@/components/RuidosCarousel";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const handleLoginClick = () => {
+    if (isClient) {
+      router.push("/Login");
+    }
+  };
 
   return (
     <>
@@ -58,8 +66,8 @@ export default function Home() {
             </li>
           </ul>
           <button
-            onClick={openModal}
-            className="bg-transparent border border-white rounded-xl px-4 py-2 hover:bg-white hover:text-black"
+            onClick={handleLoginClick}
+            className="bg-transparent border border-white rounded-xl px-3 py-1 hover:bg-purple-600 hover:text-black"
           >
             Entrar
           </button>
@@ -68,15 +76,15 @@ export default function Home() {
         <div className="flex flex-col" id="main">
           {/* Hero */}
           <div
-            className="relative flex flex-col bg-[#464646] pt-10 bg-cover justify-between h-auto"
+            className="relative flex flex-col bg-[#464646] pt-20 bg-cover justify-between h-auto"
             style={{
               backgroundImage: `url('/fundo.png') no-repeat center center fixed`,
               backgroundSize: "cover",
             }}
           >
             <div className="absolute inset-0 overflow-hidden pr-4">
-              <h1 className="h-full text-[35rem] font-bold text-white opacity-25 whitespace-nowrap absolute -top-40 -left-40">
-                CALM WAVE
+              <h1 className="h-full text-[25rem] font-bold font-shoulders opacity-10 whitespace-nowrap absolute -top-20 -left-45">
+                lm Wa
               </h1>
             </div>
 
@@ -115,25 +123,25 @@ export default function Home() {
               </div>
 
               {/* Info Section */}
-              <div className="opacity-80 mt-20 h-[160px]">
+              <div className="opacity-80 mt-20 h-[140px]">
                 <section
                   id="calmwave"
                   className="p-1 h-[100%] bg-[#2C2C2C] mb-4"
                 >
-                  <div className="w-[65%] mx-auto text-center flex justify-between bg-[#ffffff44] rounded-xl opacity-90">
-                    <div className="p-1 w-full">
-                      <h3 className="text-xl text-left font-bold text-[#9EBDC1] mb-0">
+                  <div className="w-[65%] mx-auto text-center flex justify-between bg-[#ffffff44] rounded-xl opacity-80">
+                    <div className="p-3 w-full">
+                      <h3 className="text-xl text-left font-league-gothic font-bold text-teal-300 mb-0">
                         Calm Wave
                       </h3>
-                      <p className="text-white w-[300px] text-left text-sm mt-0">
+                      <p className="text-white w-[300px] font-league-gothic text-left text-md mt-0">
                         Promovendo a inclusão de forma
                         <br />
                         relaxante através da tecnologia.
                       </p>
                     </div>
                     <div>
-                      <p className="text-white flex-wrap w-[450px] mt-1 text-sm text-left">
-                        Este projeto está sendo desenvolvido pela startup vvai©️
+                      <p className="text-white flex-wrap w-[450px] mt-4 font-league-gothic text-sm text-left">
+                        Este projeto está sendo desenvolvido pela startup vvAi©️
                         <br /> criada por estudantes da graduação em
                         Desenvolvimento de Software e <br />
                         Multiplataforma da Fatec Registro.
@@ -180,42 +188,53 @@ export default function Home() {
         {/* Por Que? */}
         <section
           id="why"
-          className="relative h-100 bg-gray-800 flex justify-center text-white z-10"
+          className="relative h-100 bg-[#111111] flex justify-center text-white z-10"
         >
           <div className="relative max-w-6xl mx-auto flex items-start mt-10 justify-between z-10 mb-20">
             {/* Coluna da Esquerda */}
             <div className="w-full md:w-1/2">
-              <h2 className="text-4xl font-bold text-teal-300 mb-4">
-                Por que Calm Wave?
+              <h2 className="text-4xl font-bold mb-4">
+                Por que
+                <span className="text-4xl font-bold text-teal-300">
+                  {" "}
+                  Calm Wave?
+                </span>
               </h2>
-              <span className="text-xl leading-relaxed">
-                O Transtorno de Processamento Auditivo Central (TPAC), também
-                conhecido como Distúrbio de Processamento Auditivo (DPA), é um
-                distúrbio no qual o cérebro tem dificuldades em processar as
-                informações auditivas, apesar da audição periférica estar
-                normal.
-                <br />
-                Isso significa que, a pessoa pode ter uma audição normal, mas
-                apresenta dificuldades em compreender e interpretar os sons que
-                ouve, principalmente em ambientes ruidosos ou quando há mais de
-                uma fonte sonora.
-              </span>
+              <div className="flex justify-center flex-col gap-y-5">
+                <p className="text-lg">
+                  O Transtorno de Processamento Auditivo Central (TPAC), também
+                  conhecido como Distúrbio de Processamento Auditivo (DPA), é um
+                  distúrbio no qual o cérebro tem dificuldades em processar as
+                  informações auditivas, apesar da audição periférica estar
+                  normal.
+                </p>
+
+                <p className="text-lg leading-relaxed">
+                  Isso significa que, a pessoa pode ter uma audição normal, mas
+                  apresenta dificuldades em compreender e interpretar os sons
+                  que ouve, principalmente em ambientes ruidosos ou quando há
+                  mais de uma fonte sonora.
+                </p>
+              </div>
             </div>
 
             {/* Coluna da Direita */}
-            <div className="w-full md:w-1/2 text-3xl font-bold space-y-3 flex flex-col items-center">
-              <div className="w-3/4 pt-4 text-right">
-                <span className="text-teal-300">Problemas</span>{" "}
-                <span>de atenção auditiva que afetam o foco e aprendizado</span>
+            <div className="w-full md:w-1/2 text-3xl font-bold space-y-2 flex flex-col items-center">
+              <div className="w-[80%] pt-4 text-right">
+                <span className="text-lg">
+                  CERCA DE 2 A 3% DAS CRIANÇAS EM IDADE ESCOLAR APRESENTAM O
+                  TRANSTORNO
+                </span>
               </div>
-              <div className="border-t border-gray-400 w-3/4 pt-4 text-right">
-                <span className="text-teal-300">Dificuldade</span>{" "}
-                <span>em seguir instruções</span>
+              <div className="border-t-2 border-gray-400 w-[80%] pt-4 text-right">
+                <span className="text-lg">
+                  MAIS DE 90% POSSUEM HIPERSENSIBILIDADE AUDITIVA
+                </span>
               </div>
-              <div className="border-t border-b border-gray-400 w-3/4 pt-4 text-right pb-4">
-                <span className="px-4 py-3 rounded-md">
-                  <span className="text-teal-300">Confusões </span>
-                  <span>com sons semelhantes</span>
+              <div className="border-t-2 border-b-2 border-gray-400 w-[80%] pt-4 text-right pb-1">
+                <span className="px-4 py-3 rounded-md text-lg">
+                  <span>PRINCIPAL BARREIRA NO</span>
+                  <span className="text-teal-300"> APRENDIZADO</span>
                 </span>
               </div>
             </div>
@@ -224,7 +243,7 @@ export default function Home() {
 
         <section
           id="solutions"
-          className="relative h-90 bg-gray-800 flex items-center justify-center text-center"
+          className="relative h-90 bg-[#111111] flex items-center justify-center text-center"
           style={{
             backgroundImage: `url('/icons/solucoes/fundo.svg')`,
             backgroundSize: "cover",
@@ -233,40 +252,72 @@ export default function Home() {
           }}
         >
           <div className="relative max-w-5xl mx-auto z-10 mt-0 mb-10">
-            <h2 className="text-5xl font-gothic text-custom_cinza">Soluções</h2>
+            <h2 className="text-2xl text-teal-300 font-league-gothic">
+              SOLUÇÕES
+            </h2>
             <p className="text-5xl mt-4 font-shoulders">RECURSOS PODEROSOS</p>
             <p className="text-5xl mt-4 font-shoulders">SÓ PARA VOCÊ</p>
 
             {/* Cards */}
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card 1 */}
-              <div className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                <img
-                  src="/icons/solucoes/iphone15.svg"
-                  alt="Descrição do Card 1"
-                  className="w-full h-40 object-cover rounded-t-lg"
-                />
+              <div>
+                <div
+                  style={{
+                    backgroundImage: "url('/fundo_card.png')",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                >
+                  <img
+                    src="/icons/solucoes/iphone15.svg"
+                    alt="Descrição do Card 1"
+                    className="w-full h-40 object-cover rounded-t-lg"
+                  />
+                </div>
                 <h3 className="mt-4 text-xl font-semibold">Aplicação Mobile</h3>
               </div>
               {/* Card 2 */}
-              <div className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                <img
-                  src="/icons/solucoes/soundwave.svg"
-                  alt="Descrição do Card 2"
-                  className="w-full h-40 object-cover rounded-t-lg"
-                />
+              <div>
+                <div
+                  style={{
+                    backgroundImage: "url('/fundo_card.png')",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                >
+                  <img
+                    src="/icons/solucoes/soundwave.svg"
+                    alt="Descrição do Card 2"
+                    className="w-full h-40 object-contain rounded-t-lg"
+                  />
+                </div>
                 <h3 className="mt-4 text-xl font-semibold">
                   Cancelamento de Ruído
                 </h3>
               </div>
 
               {/* Card 3 */}
-              <div className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                <img
-                  src="/icons/solucoes/macstudio.svg"
-                  alt="Descrição do Card 3"
-                  className="w-full h-40 object-cover rounded-t-lg"
-                />
+              <div>
+                <div
+                  style={{
+                    backgroundImage: "url('/fundo_card.png')",
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  className="bg-gray-700 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
+                >
+                  <img
+                    src="/icons/solucoes/macstudio.svg"
+                    alt="Descrição do Card 3"
+                    className="w-full h-40 object-cover rounded-t-lg"
+                  />
+                </div>
                 <h3 className="mt-4 text-xl font-semibold">
                   Inteligência artificial
                 </h3>
@@ -286,7 +337,7 @@ export default function Home() {
         {/* Frequências */}
         <section id="frequencies">
           <div
-            className="bg-gray-800 h-full py-20 flex flex-col gap-10"
+            className="bg-[#111111] h-full py-20 flex flex-col gap-10 relative"
             style={{
               backgroundImage: "url('/blur.png')",
               backgroundSize: "contain",
@@ -294,9 +345,13 @@ export default function Home() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <h2 className="text-5xl font-gothic text-custom_cinza text-center">
-              CONHEÇA OS RUÍDOS
+            <h2
+              className="text-[110px] w-full font-gothic text-custom_cinza text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-90"
+              style={{ textShadow: "2px 2px 15px rgba(0, 128, 128, 0.7)" }}
+            >
+              RUÍDOS CALMANTES
             </h2>
+
             <CarouselRD />
           </div>
         </section>
@@ -304,7 +359,7 @@ export default function Home() {
         {/* Contato */}
         <FooterBar />
         <ScrollButton />
-        <LoginFormModal isOpen={isModalOpen} onClose={closeModal} />
+        {/* <LoginFormModal isOpen={isModalOpen} onClose={closeModal} /> */}
       </div>
     </>
   );
