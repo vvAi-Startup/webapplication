@@ -35,7 +35,7 @@ export default function CarouselRD() {
       autoPlay={true}
       autoPlaySpeed={5000}
       transitionDuration={1000}
-    >
+    > 
       <div className="relative flex justify-center items-center">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
           <div className="bg-vertical-gradient w-1/2 p-1">
