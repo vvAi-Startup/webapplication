@@ -38,7 +38,7 @@ export default function CarouselRD() {
     >
       <div className="relative flex justify-center items-center">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
-          <div className="bg-vertical-gradient w-1/2 p-2">
+          <div className="bg-vertical-gradient w-1/2 p-1">
             <Image
               src={ruidoBranco}
               alt="Ruído Branco"
@@ -60,7 +60,7 @@ export default function CarouselRD() {
 
       <div className="relative flex justify-center items-center">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
-          <div className="bg-vertical-gradient w-1/2 p-2">
+          <div className="bg-vertical-gradient w-1/2 p-1">
             <Image
               src={ruidoRosa}
               alt="Ruído Rosa"
@@ -82,7 +82,7 @@ export default function CarouselRD() {
 
       <div className="relative flex justify-center items-center">
         <div className="bg-white shadow-lg rounded-lg overflow-hidden md:w-2/3 lg:w-2/3 flex flex-row transition-transform duration-500 transform">
-          <div className="bg-vertical-gradient w-1/2 p-2">
+          <div className="bg-vertical-gradient w-1/2 p-1">
             <Image
               src={ruidoMarrom}
               alt="Ruído Marrom"

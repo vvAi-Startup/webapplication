@@ -40,15 +40,15 @@ export default function Home() {
           </div>
           <ul className="flex space-x-6">
             <li>
-              <a href="#calmwave" className="hover:text-gray-300">
+              <a href="#why" className="hover:text-gray-300">
                 Calm Wave
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="#why" className="hover:text-gray-300">
-                Por Que?
+                Por quê
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="#solutions" className="hover:text-gray-300">
                 Soluções
